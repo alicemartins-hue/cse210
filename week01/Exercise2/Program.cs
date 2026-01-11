@@ -32,7 +32,31 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your letter grade is {letter}");
+        string sign = "";
+
+        int lastDigit = grade % 10;
+
+        if (lastDigit >= 7)
+        {
+            sign = "+";
+        }
+        else if (lastDigit < 3)
+        {
+            sign = "-";
+        }
+
+
+        if (letter == "A" && sign == "+")
+        {
+            sign = "";
+        }
+
+        if (letter == "F")
+        {
+            sign = "";
+        }
+
+        Console.WriteLine($"Your letter grade is {letter}{sign}");
 
 
         if (grade >= 70)
