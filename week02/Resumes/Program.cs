@@ -22,8 +22,6 @@ class Program
         resume1._list.Add(job1);
         resume1._list.Add(job2);
 
-        Console.WriteLine(resume1._list[0]._jobTitle);
-
         resume1.Display();
         
 
