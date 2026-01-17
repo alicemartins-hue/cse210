@@ -10,6 +10,13 @@ class Program
         int grade = int.Parse(Console.ReadLine());
 
         string letter = "";
+        int lastDigit = grade % 10;
+
+        if (grade == 100)
+        {
+            lastDigit = 9;
+            letter = "A";
+        }
 
         if (grade >= 90)
         {
@@ -33,8 +40,6 @@ class Program
         }
 
         string sign = "";
-
-        int lastDigit = grade % 10;
 
         if (lastDigit >= 7)
         {
