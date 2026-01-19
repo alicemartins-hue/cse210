@@ -16,14 +16,32 @@ public class Journal
         }
     }
 
-    public void SaveFile(string file)
+    public void SaveFile(string filename)
     {
-
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            foreach (Entry entry in _entries)
+            {
+                writer.WriteLine($"{entry._date}|{entry._prompt}|{entry._response}");
+            }
+        }
     }
 
-    public void LoadFromFile(string file)
+    public void LoadFromFile(string filename)
     {
+        _entries.Clear();
+        string[] lines = File.ReadAllLines(filename);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("|");
 
+            Entry entry = new Entry();
+            entry._date = parts[0];
+            entry._prompt = parts[1];
+            entry._response = parts[2];
+
+            _entries.Add(entry);
+        }
     }
     
 }

@@ -37,7 +37,6 @@ class Program
                 string prompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine(prompt);
                 Console.Write("> ");
-
                 string response = Console.ReadLine();
 
                 Entry entry = new Entry();
@@ -46,21 +45,28 @@ class Program
                 entry._response = response;
 
                 journal.AddEntry(entry);
-
-
             }
             else if (choice == "2")
             {
                 journal.DisplayAll();
+            }
+            else if (choice == "3")
+            {
+                Console.Write("Filename: ");
+                string filename = Console.ReadLine();
+                journal.SaveFile(filename);
+            }
+            else if (choice == "4")
+            {
+                Console.Write("Filename: ");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
             else
             {
                 running = false;
             }
         }
-
-
-
 
 
     }
