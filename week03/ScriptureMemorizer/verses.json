@@ -1,0 +1,72 @@
+[
+    {
+        "reference": "John 3:16",
+        "book": "John",
+        "chapter": 3,
+        "verse": 16,
+        "text": "For God so loved the world, that he gave his only begotten Son."
+    },
+    {
+        "reference": "Psalm 23:1",
+        "book": "Psalms",
+        "chapter": 23,
+        "verse": 1,
+        "text": "The Lord is my shepherd; I shall not want."
+    },
+    {
+        "reference": "Proverbs 3:5",
+        "book": "Proverbs",
+        "chapter": 3,
+        "verse": 5,
+        "text": "Trust in the Lord with all thine heart; and lean not unto thine own understanding."
+    },
+    {
+        "reference": "Genesis 1:1",
+        "book": "Genesis",
+        "chapter": 1,
+        "verse": 1,
+        "text": "In the beginning God created the heaven and the earth."
+    },
+    {
+        "reference": "Romans 8:28",
+        "book": "Romans",
+        "chapter": 8,
+        "verse": 28,
+        "text": "And we know that all things work together for good to them that love God."
+    },
+    {
+        "reference": "Matthew 5:14",
+        "book": "Matthew",
+        "chapter": 5,
+        "verse": 14,
+        "text": "Ye are the light of the world. A city that is set on an hill cannot be hid."
+    },
+    {
+        "reference": "Philippians 4:13",
+        "book": "Philippians",
+        "chapter": 4,
+        "verse": 13,
+        "text": "I can do all things through Christ which strengtheneth me."
+    },
+    {
+        "reference": "Isaiah 41:10",
+        "book": "Isaiah",
+        "chapter": 41,
+        "verse": 10,
+        "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God."
+    },
+    {
+        "reference": "Joshua 1:9",
+        "book": "Joshua",
+        "chapter": 1,
+        "verse": 9,
+        "text": "Be strong and of a good courage; be not afraid, neither be thou dismayed."
+    },
+    {
+        "reference": "Hebrews 11:1",
+        "book": "Hebrews",
+        "chapter": 11,
+        "verse": 1,
+        "text": "Now faith is the substance of things hoped for, the evidence of things not seen."
+    }
+]
