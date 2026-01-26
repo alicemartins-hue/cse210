@@ -20,9 +20,13 @@ class Program
         Reference reference1 = new Reference(v.book, v.chapter, v.verse);
         Scripture scripture = new Scripture(reference1, v.text);
 
+        Console.Clear();
+        Console.WriteLine(scripture.GetDisplayText());
+
         while (!scripture.IsCompletelyHidden())
         {
-            Console.Write("Please enter to continue or type 'quit' to finish");
+            Console.WriteLine("Please enter to continue or type 'quit' to finish");
+            Console.Write("... ");
             string answer = Console.ReadLine();
 
             if (answer == "quit")
