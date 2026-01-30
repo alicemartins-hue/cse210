@@ -19,15 +19,12 @@ class Program
         Video video2 = new Video("video 2", "author 2", 488);
         video2.AddComment("name1", "text");
         video2.AddComment("name2", "text");
-        video2.AddComment("name3", "text");
-        video2.AddComment("name4", "text");
+        video2.AddComment("name3", "text");    
 
         Video video3 = new Video("video 3", "author 3", 60);
         video3.AddComment("name1", "text");
         video3.AddComment("name2", "text");
         video3.AddComment("name3", "text");
-        video3.AddComment("name4", "text");
-
 
         Video video4 = new Video("video 4", "author 4", 520);
         video4.AddComment("name1", "text");
