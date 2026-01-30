@@ -16,10 +16,23 @@ public class Video
         return _storeComments.Count;
     }
 
-    public Video(string title, string author, int length)
+    public Video(string title, string author, double length)
     {
         _title = title;
         _author = author;
         _length = length;
+    }
+
+    public string GetDisplay()
+    {
+        return $" Video : {_title}, {_author}, {_length} seconds";
+    }
+
+    public void DisplayComments()
+    {
+        foreach (var comment in _storeComments)
+        {
+            Console.WriteLine(comment.GetDisplay());
+        }
     }
 }
