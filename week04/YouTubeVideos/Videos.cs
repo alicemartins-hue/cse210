@@ -25,7 +25,7 @@ public class Video
 
     public string GetDisplay()
     {
-        return $" Video : {_title}, {_author}, {_length} seconds";
+        return $" Video : {_title}, {_author}, {_length} seconds ({NumberOfComments()} comments)";
     }
 
     public void DisplayComments()

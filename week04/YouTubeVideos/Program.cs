@@ -43,7 +43,6 @@ class Program
         foreach(var video in videos)
         {
             Console.WriteLine(video.GetDisplay());
-            Console.WriteLine($" The video get {video.NumberOfComments()} comments");
             video.DisplayComments();
             Console.WriteLine("");
         }
