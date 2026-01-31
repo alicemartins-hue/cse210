@@ -14,7 +14,7 @@ public class Product
         _quantity = quantity;
     }
 
-    public double TotalCost(double _price, int _quantity)
+    public double TotalCost()
     {
         return _price * _quantity;
     }
