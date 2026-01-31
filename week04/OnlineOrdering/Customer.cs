@@ -14,5 +14,14 @@ public class Customer
     {
         return _address.IsUsa();
     }
+
+    public string GetName()
+    {
+        return _name;
+    }
     
+    public string GetAddress()
+    {
+        return _address.GetFullAddress();
+    }
 }

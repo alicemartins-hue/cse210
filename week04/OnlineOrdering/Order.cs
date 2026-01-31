@@ -36,4 +36,21 @@ public class Order
 
         return total;
     }
+
+    public string PackingLabel()
+    {
+        string label = "Packing Label:\n";
+
+        foreach (Product product in _products)
+        {
+            label += $"{product.GetName()} (ID: {product.GetId()})\n";
+        }
+
+        return label;
+    }
+
+    public string GetShippingLabel()
+    {
+        return $"Shipping Label: \n{_customer.GetName()}\n{_customer.GetAddress()}";
+    }
 }
