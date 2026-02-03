@@ -10,7 +10,7 @@ public class Assignment
         _topic = topic;
     }
 
-    public string GetName()
+    public string GetStudentName()
     {
         return _studentName;
     }
