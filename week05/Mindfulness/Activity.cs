@@ -1,4 +1,4 @@
-
+using System.IO;
 public class Activity
 {
     protected string _name;
@@ -15,13 +15,16 @@ public class Activity
     {
         Console.Clear();
         Console.Write($"Welcome to the {_name} Activity.");
-        Console.Write("");
+        Console.WriteLine("");
+        Console.WriteLine("");
         Console.Write(_description);
-        Console.Write("");
-        Console.Write("How long, in seconds, would you like for your session?");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.Write("How long, in seconds, would you like for your session? ");
 
         _duration = int.Parse(Console.ReadLine());
 
+        Console.Clear();
         Console.WriteLine("Prepare to begin...");
         ShowSpinner(3);
     }
@@ -32,8 +35,10 @@ public class Activity
         Console.WriteLine("Well done!!");
         ShowSpinner(3);
 
-        Console.WriteLine($"You have completed another {_duration} of the {_name} Activity.");
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name} Activity.");
         ShowSpinner(3);
+
+        SaveLog();
     }
 
     public void ShowSpinner(int second)
@@ -46,17 +51,17 @@ public class Activity
         while (DateTime.Now < endTime)
         {
             Console.Write(spinner[i]);
-            Thread.Sleep(200);
+            Thread.Sleep(500);
             Console.Write("\b \b");
 
             i++;
             if (i >= spinner.Count)
-            {
+            { 
                 i = 0;
             }
         }
     }
-    
+
     public void CountDown(int second)
     {
         for (int i = second; i > 0; i--)
@@ -66,4 +71,11 @@ public class Activity
             Console.Write("\b \b");
         }
     }
+
+    public void SaveLog()
+    {
+        string log = $"{DateTime.Now} - {_name} for {_duration} seconds";
+        File.AppendAllText("log.txt", log + Environment.NewLine);
+    }
+
 }

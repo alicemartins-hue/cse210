@@ -3,7 +3,7 @@ public class BreathingActivity : Activity
 {
     public BreathingActivity()
     : base("Breathing",
-    "This activity will help you relax by guiding you through breathin in and out slowlt. Clear your mind and focus on your breathing.")
+    "This activity will help you relax by guiding you through breathing in and out slowly.\n Clear your mind and focus on your breathing.")
     {
     }
     
@@ -20,8 +20,10 @@ public class BreathingActivity : Activity
             Console.WriteLine();
 
             Console.Write("Breathe out... ");
-            CountDown(4);
+            CountDown(6);
             Console.WriteLine();
+
+            Console.WriteLine("");
         }
 
         DisplayEndingMessage();
