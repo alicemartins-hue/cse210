@@ -1,7 +1,7 @@
 
-public class BreatingActivity : Activity
+public class BreathingActivity : Activity
 {
-    public BreatingActivity()
+    public BreathingActivity()
     : base("Breathing",
     "This activity will help you relax by guiding you through breathin in and out slowlt. Clear your mind and focus on your breathing.")
     {
