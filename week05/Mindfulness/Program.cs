@@ -47,6 +47,12 @@ class Program
             {
                 ClearLog();
             }
+            else if (choice == "6")
+            {
+                Console.WriteLine("Goodbye!");
+                Thread.Sleep(1000);
+                break;
+            }
             else
             {
                 Console.WriteLine("Invalid choice. Press Enter to continue.");
