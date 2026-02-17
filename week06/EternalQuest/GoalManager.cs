@@ -1,8 +1,8 @@
 
 public class GoalManager
 {
-    private List<Goal> _goals;
-    private int _score;
+    private List<Goal> _goals = new List<Goal>();
+    private int _score = 0;
 
     public GoalManager()
     {
@@ -21,7 +21,12 @@ public class GoalManager
 
     public void ListGoalNames()
     {
-
+        int i = 1;
+        foreach (Goal g in _goals)
+        {
+            Console.WriteLine($"{i}. {g.GetDetailString()}");
+            i++;
+        }
     }
 
     public void CreateGoal()

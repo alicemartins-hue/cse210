@@ -19,8 +19,8 @@ public abstract class Goal
 
     public string GetDetailString()
     {
-
-        return "something";
+        string status = IsComplete() ? "[X]" : "[ ]";
+        return $"{status} {_shortName} ({_description})";
     }
 
     public abstract string GetStringRepresentation();
