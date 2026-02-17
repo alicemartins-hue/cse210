@@ -29,9 +29,16 @@ public class ChecklistGoal : Goal
         string status = IsComplete() ? "[X]" : "[ ]";
         return $"{status} {_shortName} ({_description}) -- Currently: {_amountCompleted}/{_target}";
     }
+    
 
     public override string GetStringRepresentation()
     {
         return $"ChecklistGoal|{_shortName}|{_description}|{_points}|{_amountCompleted}|{_target}|{_bonus}";
     }
+
+    public int GetBonus()
+    {
+        return _bonus;
+    }
+
 }
