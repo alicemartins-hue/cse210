@@ -171,7 +171,6 @@ public class GoalManager
         string[] lines = File.ReadAllLines(filename);
 
         _goals.Clear();
-
         _score = int.Parse(lines[0]);
 
         for (int i = 1; i < lines.Length; i++)
@@ -180,7 +179,12 @@ public class GoalManager
 
             if (parts[0] == "SimpleGoal")
             {
-                _goals.Add(new SimpleGoal(parts[1], parts[2], parts[3]));
+                SimpleGoal goal = new SimpleGoal(parts[1], parts[2], parts[3]);
+
+                bool isComplete = bool.Parse(parts[4]);
+                goal.SetComplete(isComplete);           
+
+                _goals.Add(goal);
             }
             else if (parts[0] == "EternalGoal")
             {
@@ -188,16 +192,24 @@ public class GoalManager
             }
             else if (parts[0] == "ChecklistGoal")
             {
-                _goals.Add(new ChecklistGoal(
+                ChecklistGoal goal = new ChecklistGoal(
                     parts[1],
                     parts[2],
                     parts[3],
-                    int.Parse(parts[4]),
-                    int.Parse(parts[5])
-                ));
+                    int.Parse(parts[5]),   
+                    int.Parse(parts[6])   
+                );
+
+                int amountCompleted = int.Parse(parts[4]);
+                goal.SetAmountCompleted(amountCompleted);
+
+                _goals.Add(goal);
             }
+
         }
     }
+
+
 
 
 
